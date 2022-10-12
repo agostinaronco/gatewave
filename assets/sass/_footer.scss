@@ -1,0 +1,54 @@
+footer {
+    background-color: $footer;
+    @include rem-fallback(padding, 50px/16px, 0);
+    position: relative;
+    z-index: 10;
+    .logo {
+        margin-bottom: 10px;
+    }
+    a {
+        display: block;
+    }
+    .redes {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        @include rem-fallback(margin-bottom, 20px/16px);
+        @media (max-width: 767.98px) {
+            justify-content: center;
+        }
+        a {
+            background-color: $primary;
+            width: 35px;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50px;
+            @include rem-fallback(margin-left, 10px/16px);
+            img {
+                width: 15px;
+            }
+            &:hover {
+                background-color: $secondary
+            }
+        }
+    }
+    .footer-tel {
+        @include rem-fallback(margin-bottom, 20px/16px);
+        @include rem-fallback(font-size, 30px/16px);
+        color: white;
+        font-weight: 600;
+        letter-spacing: 1px;
+        a {
+            display: block;
+        }
+    }
+    .footer-mail,
+    p {
+        @include rem-fallback(font-size, 15px/16px);
+        @include rem-fallback(margin-top, 8px/16px);
+        color: white;
+        font-weight: 400;
+    }
+}
